@@ -1,17 +1,17 @@
 livre1 = {
-    reference: "00000000",
+    reference: "1",
     titre : "L'appel de Cthulhu",
     auteur :"H. P. Lovecraft"
 };
 
 livre2 = {
-    reference : "00000001",
+    reference : "2",
     titre :"Ring",
     auteur : "Kōji Suzuki"
 };
 
 livre3 = {
-    reference : "00000002",
+    reference : "3",
     titre: "Carrie",
     auteur : "Stephen King"
 };
