@@ -25,3 +25,28 @@ function mkHtml (livres) {
     }
     return result;
 }
+
+/*
+9 h 34
+8. Implémentez un listener sur le formulaire, qui, lorsque que ce dernier est "soumis", ajoute un nouveau livre (objet) dans le tableau livres. Pour cela, utilisez la méthode JS push() (à chercher dans la doc)
+*/
+
+
+// ajouter nouveau livre à mon tableau
+var formNewbook = document.getElementById("addLivre");
+formNewbook.addEventListener("submit", function(event){
+    event.preventDefault ;
+    // afficher resultat
+
+    let newReference = livres.length + 1 ;
+    newReference = newReference.toString();
+
+    let newBook = {
+        reference : newReference,
+        titre: titre.value,
+        auteur : auteur.value
+    };
+
+    livres.push(newBook);
+    console.log(livres);
+})
