@@ -3,3 +3,17 @@ livre1 = {
     titre : "L'appel de Cthulhu",
     auteur :"H. P. Lovecraft"
 };
+
+livre2 = {
+    reference : "00000001",
+    titre :"Ring",
+    auteur : "Kōji Suzuki"
+};
+
+livre3 = {
+    reference : "00000002",
+    titre: "Carrie",
+    auteur : "Stephen King"
+};
+
+livres = [livre1, livre2, livre3];
