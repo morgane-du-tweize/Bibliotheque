@@ -17,3 +17,11 @@ livre3 = {
 };
 
 livres = [livre1, livre2, livre3];
+
+function mkHtml (livres) {
+    result = '';
+    for (let unLivre of livres){
+        result += `"${unLivre.titre}", par "${unLivre.auteur}"\n`;
+    }
+    return result;
+}
