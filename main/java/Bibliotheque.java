@@ -2,7 +2,6 @@
 
 import java.io.IOException;
 import java.util.ArrayList;
-
 import models.Livre;
 
 import javax.servlet.ServletException;
@@ -36,13 +35,8 @@ public class Bibliotheque extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		// créer référence vers objet de type ArrayList<Livre>
-		// instancier objet de type ArrayList<Livre>
-		ArrayList livres = getLivres();
-		// balancer ça à objet request
-		request.setAttribute("livres", livres);
+		request.setAttribute("livres", getLivres());
 		this.getServletContext().getRequestDispatcher("/jsps/index.jsp").forward(request, response);
-		response.getWriter().append("Served at: ").append(request.getContextPath());
 	}
 
 	/**
@@ -54,18 +48,18 @@ public class Bibliotheque extends HttpServlet {
 	}
 	
 	private ArrayList<Livre> getLivres(){
-		ArrayList<Livre> livres = new ArrayList<>();
+		 
+		ArrayList<Livre> livres = new ArrayList<Livre>();
 		
-		Livre livre1 = new Livre("001", "Carrie au bal du Diable", "Stephen King");
-		Livre livre2 = new Livre("002", "Ring", "Kōji Suzuki");
-		Livre livre3 = new Livre("003", "Chtulhu", "H. P. Lovrcraft");
-
+		Livre livre1 = new Livre("00001", "Carrie au bal du diable", "Stephen King");
+		Livre livre2 = new Livre("00002", "Ring", "Kōji Suzuki" );
+		Livre livre3 = new Livre("00003", "Chtulhu", "HP Lovecraft" );
+		
 		livres.add(livre1);
 		livres.add(livre2);
 		livres.add(livre3);
 		
 		return livres ;
-		
-	}
+	};
 
 }
