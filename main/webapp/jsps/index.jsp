@@ -12,18 +12,21 @@
 	<body>
 		<h1>Ma liste de livres</h1>
 		
-
-			<!-- 
-request.setAttribute("livres", getLivres());
-			 -->
-			 	<% 	ArrayList<Livre> livres =(ArrayList<Livre>) request.getAttribute("livres") ; %>
-			 	<%for (Livre l : livres) { %>
-			 		<p><%=l.getTitre() %>  </p>
-			
+		<table>
+			<tr>
+				<th>Titre</th>
+				<th>Auteur</th>
+			</tr>
+		 	<% 	ArrayList<Livre> livres =(ArrayList<Livre>) request.getAttribute("livres") ; %>
+		 	<%for (Livre l : livres) { %>
+		 	<tr>
+		 		<td><%=l.getTitre() %>   </td>
+		 		<td><%= l.getAuteur() %>  </td>
+		 	
+			<% } %>	
+			</tr>	
 		
-				<% } %>
-
-
+		</table>
 
 	</body>
 </html>
