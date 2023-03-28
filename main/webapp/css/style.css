@@ -1,5 +1,52 @@
 @charset "UTF-8";
 
+*{
+/*	width: 95%;  */
+	margin: auto;
+}
+
+.topimage {
+	background-image: url("../resources/books.jpg");
+	width: 100%;
+	height: 150px;
+
+}
+
+.aligned {
+	text-align: center;
+}
+
 h1{
-	color: purple;
+	padding: 3em;
+}
+
+
+th, td {
+	padding-left: 8em;
+	padding-right: 8em;
+	padding-top: 2.5em;
+	padding-bottom: 2.5em;
+}
+
+.books tr:nth-child(even){
+	background-color: #ffb3ff;
+}
+
+.books tr:nth-child(odd){
+	background-color: #cc00cc;
+}
+
+footer {
+
+	padding: 5em;
+}
+
+.bottomcontainer {
+	display: flex;
+}
+
+.bottomelements {
+	padding: 3em;
+	border: 5px solid grey;
+	
 }

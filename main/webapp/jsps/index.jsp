@@ -12,13 +12,17 @@
 	</head>
 	<body>
 
-		<header>Bibliothèque en ligne</header>
+		<header>
+			<h2>Bibliothèque en ligne</h2>
+
+			<div class="topimage"></div>	
+		</header>
 
 		<main>
 		
-		<h1>Ma liste de livres</h1>
+			<h1 class="aligned">Ma liste de livres</h1>
 		
-			<table>
+			<table class="books">
 				<tr>
 					<th>Titre</th>
 					<th>Auteur</th>
@@ -37,7 +41,15 @@
 		
 		</main>
 
-		<footer>Author : morgane-du-tweize</footer>
+		<footer>
+			<div class="bottomcontainer">
+				<p class="bottomelements">my github</p>
+				<p class="bottomelements">my codin games page</p>
+				<p class="bottomelements">my linked in profile</p>
+			
+			</div>
+			<p>Author : morgane-du-tweize</p>
+		</footer>
 
 	</body>
 </html>
