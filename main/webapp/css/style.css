@@ -45,8 +45,13 @@ footer {
 	display: flex;
 }
 
+
 .bottomelements {
 	padding: 3em;
 	border: 5px solid grey;
-	
+}
+
+.formelement {
+	padding: 12px 20px;
+	margin: 8px 0px;
 }

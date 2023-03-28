@@ -36,7 +36,11 @@
 				<% } %>	
 				</tr>	
 			
-			</table>		
+			</table>
+			
+			<div>
+				<h2><a href="ajout">Ajouter un nouveau livre</a></h2>
+			</div>	
 
 		
 		</main>
