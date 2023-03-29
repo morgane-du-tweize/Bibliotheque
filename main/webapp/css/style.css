@@ -1,8 +1,8 @@
 @charset "UTF-8";
 
 *{
-/*	width: 95%;  */
 	margin: auto;
+	font-family: sans-serif;
 }
 
 .topimage {
@@ -16,8 +16,8 @@
 	text-align: center;
 }
 
-h1{
-	padding: 3em;
+h1, h2{
+	padding: 1.5em;
 }
 
 
@@ -37,8 +37,7 @@ th, td {
 }
 
 footer {
-
-	padding: 5em;
+	background-color: #e6e6e6;
 }
 
 .bottomcontainer {
@@ -47,8 +46,8 @@ footer {
 
 
 .bottomelements {
-	padding: 3em;
-	border: 5px solid grey;
+	padding: 1.5em;
+
 }
 
 .formelement {
