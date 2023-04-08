@@ -52,7 +52,7 @@
 				<p class="bottomelements">my linked in profile</p>
 			
 			</div>
-			<p>Author : morgane-du-tweize</p>
+			<p class="bottomelements">Author : morgane-du-tweize</p>
 		</footer>
 
 	</body>

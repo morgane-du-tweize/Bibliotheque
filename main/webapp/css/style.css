@@ -40,6 +40,21 @@ footer {
 	background-color: #e6e6e6;
 }
 
+.ajout {
+	width: 15em;
+	height: 3em;
+	background-color: #5900b3;
+	color: white;
+	border: none;
+	padding: 8px 15px;
+	text-align: center;
+	margin: 3em;
+}
+
+.ajout a:visited {
+	color: white;
+}
+
 .bottomcontainer {
 	display: flex;
 }
