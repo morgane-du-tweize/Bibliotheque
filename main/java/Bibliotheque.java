@@ -3,6 +3,7 @@
 import java.io.IOException;
 import java.util.ArrayList;
 import models.Livre;
+import models.DbConnect;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -35,7 +36,9 @@ public class Bibliotheque extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		request.setAttribute("livres", getLivres());
+		DbConnect connect = new DbConnect();
+
+		request.setAttribute("livres", connect.recupererLivres());
 		this.getServletContext().getRequestDispatcher("/jsps/index.jsp").forward(request, response);
 	}
 
@@ -43,22 +46,10 @@ public class Bibliotheque extends HttpServlet {
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
+
 		doGet(request, response);
-	}
 	
-	private ArrayList<Livre> getLivres(){
-		 
-		ArrayList<Livre> livres = new ArrayList<Livre>();
-		
-		Livre livre1 = new Livre("00001", "Carrie au bal du diable", "Stephen King");
-		Livre livre2 = new Livre("00002", "Ring", "Kōji Suzuki" );
-		Livre livre3 = new Livre("00003", "Chtulhu", "HP Lovecraft" );
-		
-		livres.add(livre1);
-		livres.add(livre2);
-		livres.add(livre3);
-		
-		return livres ;
-	};
+	}
+
 
 }

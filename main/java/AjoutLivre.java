@@ -1,4 +1,5 @@
 
+import models.DbConnect;
 import models.Livre;
 import java.io.IOException;
 import javax.servlet.ServletException;
@@ -39,6 +40,10 @@ public class AjoutLivre extends HttpServlet {
 		String auteur = request.getParameter("auteur");
 		Livre nouveaulivre = new Livre("300", titre, auteur);
 		System.out.println(nouveaulivre);
+		
+		DbConnect connect = new DbConnect();
+		connect.ajouterLivre(nouveaulivre);		
+		
 		response.sendRedirect(request.getContextPath() + "");
 	}
 
