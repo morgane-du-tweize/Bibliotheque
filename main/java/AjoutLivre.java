@@ -38,7 +38,7 @@ public class AjoutLivre extends HttpServlet {
 		
 		String titre = request.getParameter("titre");
 		String auteur = request.getParameter("auteur");
-		Livre nouveaulivre = new Livre("300", titre, auteur);
+		Livre nouveaulivre = new Livre(titre, auteur);
 		System.out.println(nouveaulivre);
 		
 		DbConnect connect = new DbConnect();

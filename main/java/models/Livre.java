@@ -6,8 +6,7 @@ public class Livre {
 	private String titre;
 	private String auteur;
 	
-	public Livre(String reference, String titre, String auteur) {
-		this.reference = reference;
+	public Livre(String titre, String auteur) {
 		this.titre = titre;
 		this.auteur = auteur;
 	}
