@@ -3,7 +3,6 @@
 import java.io.IOException;
 import java.util.ArrayList;
 import models.Livre;
-import models.DbConnect;
 
 import javax.servlet.ServletException;
 import javax.servlet.annotation.WebServlet;
@@ -36,10 +35,12 @@ public class Bibliotheque extends HttpServlet {
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		
-		DbConnect connect = new DbConnect();
+		Livre l = new Livre("", "");
+		ArrayList<Livre> livres = l.selectAll() ;
+		request.setAttribute("livres", livres);
 
-		request.setAttribute("livres", connect.recupererLivres());
 		this.getServletContext().getRequestDispatcher("/jsps/index.jsp").forward(request, response);
+
 	}
 
 	/**
