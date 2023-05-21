@@ -1,5 +1,3 @@
-
-
 import java.io.IOException;
 import java.util.ArrayList;
 import models.Livre;
@@ -14,8 +12,8 @@ import javax.servlet.http.HttpServletResponse;
  * Servlet implementation class Bibliotheque
  */
 @WebServlet(
-		name = "bibliotheque", 
-		urlPatterns = { 
+		name = "bibliotheque",
+		urlPatterns = {
 				"", "/bibliotheque"
 		})
 
@@ -34,23 +32,20 @@ public class Bibliotheque extends HttpServlet {
 	 * @see HttpServlet#doGet(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doGet(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-		
-		Livre l = new Livre("", "");
-		ArrayList<Livre> livres = l.selectAll() ;
+
+		Livre l = new Livre ("", "");
+		ArrayList<Livre> livres = l.selectAll();
 		request.setAttribute("livres", livres);
-
+		
 		this.getServletContext().getRequestDispatcher("/jsps/index.jsp").forward(request, response);
-
 	}
 
 	/**
 	 * @see HttpServlet#doPost(HttpServletRequest request, HttpServletResponse response)
 	 */
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
-
-		doGet(request, response);
 	
+		doGet(request, response);
 	}
-
 
 }

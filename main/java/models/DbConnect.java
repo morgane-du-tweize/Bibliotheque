@@ -8,8 +8,8 @@ public class DbConnect {
 	
 	private static DbConnect connect ;
 	private Connection connection ;
-
-	private DbConnect () {
+	
+	private DbConnect() {
 		
 		try {
 			Class.forName("com.mysql.jdbc.Driver");
@@ -37,7 +37,9 @@ public class DbConnect {
 	public Connection getConnection() {
 		return connection;
 	}
+	
 	public void setConnection(Connection connection) {
-		this.connection = connection;
-	}	
+		this.connection = connection ;
+	}
+
 }
