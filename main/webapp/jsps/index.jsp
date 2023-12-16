@@ -26,23 +26,52 @@
 				<tr>
 					<th>Titre</th>
 					<th>Auteur</th>
+					<th>Modifier</th>
 				</tr>
-			 	<% 	ArrayList<Livre> livres =(ArrayList<Livre>) request.getAttribute("livres") ; %>
-			 	<%for (Livre l : livres) { %>
+			 	<% 	ArrayList<Livre> livres =(ArrayList<Livre>) request.getAttribute("livres") ;
+					
+			 		for (Livre l : livres) { 
+				 		request.setAttribute("reference", l.getReference());
+				 		session.setAttribute("reference", l.getReference());
+				 		String Lreference =l.getReference();
+			 		%>
 			 	<tr>
-			 		<td><%=l.getTitre() %>   </td>
-			 		<td><%= l.getAuteur() %>  </td>
+			 		<td><%=l.getTitre() %>  </td>
+			 		<td><%= l.getAuteur() %> </td>
+
+			 		<td>
+			 		  	<form method="POST" action="bibliotheque">
+			 				<input type="hidden" name="reference" value="<%=l.getReference()%>">
+			 				<input type="submit" name="modifier">
+			 			</form>		 		
+			 		 
+			 		</td>
 			 	
 				<% } %>	
 				</tr>	
 			
 			</table>
 			
-			<div>
-				<h2><a href="ajout">Ajouter un nouveau livre</a></h2>
-			</div>	
-
+			<h2>Ajouter un nouveau livre</h2>
+			<div class="ajout">
+				<form method="POST" action="ajout">
+					<div class="formelement">
+						<label for="titre">Titre</label><br>
+						<input type="text" name="titre"><br>
+					</div>
 		
+					<div class="formelement">
+						<label for="auteur">Auteur</label><br>
+						<input type="text" name="auteur"><br>
+					</div>
+		
+					<div class="formelement">
+						<input type="submit">			
+					</div>		
+				</form>
+			</div>
+			
+
 		</main>
 
 		<footer>

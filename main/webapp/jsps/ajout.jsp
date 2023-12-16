@@ -9,7 +9,7 @@
 	</head>
 	<body>
 		<h1>Ajout de livre</h1>
-		
+
 		<form method="POST" action="ajout">
 			<div class="formelement">
 				<label for="titre">Titre</label><br>
@@ -25,6 +25,7 @@
 				<input type="submit">			
 			</div>		
 		</form>
+
 		
 		<div>
 			<p><a href="/bibliotheque">Retour à l'accueil</a></p>

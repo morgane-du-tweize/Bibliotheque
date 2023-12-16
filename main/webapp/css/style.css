@@ -27,6 +27,19 @@ th, td {
 	padding-top: 2.5em;
 	padding-bottom: 2.5em;
 }
+ul {
+	list-style-type: none;
+	background-color: #cc00cc;
+}
+
+li {
+	margin : 2em;
+	font-size: 1.5rem;
+}
+
+.books{
+	margin: 5em;
+}
 
 .books tr:nth-child(even){
 	background-color: #ffb3ff;
@@ -40,15 +53,30 @@ footer {
 	background-color: #e6e6e6;
 }
 
+.flex-container {
+	display: flex;
+	flex-direction: column;
+	width: 40em;
+    justify-content: center;
+    align-items: center;
+}
+
+.update {
+	width: 40em;
+	height: 15em;
+	background-color: #cc00cc;
+	display: flex;
+	
+}
+
 .ajout {
-	width: 15em;
-	height: 3em;
+	width: 40em;
+	height: 15em;
 	background-color: #5900b3;
 	color: white;
 	border: none;
-	padding: 8px 15px;
+	padding: 3em;
 	text-align: center;
-	margin: 3em;
 }
 
 .ajout a:visited {
