@@ -27,7 +27,6 @@
 					<ul>
 						<li>Titre : <%= livre.getTitre() %></li>
 						<li>Auteur : <%= livre.getAuteur() %></li>
-						<li>Reference : <%=livre.getReference() %></li>
 					</ul>			
 				</div>
 	
