@@ -1,3 +1,5 @@
+package servlets;
+
 import java.io.IOException;
 import java.util.ArrayList;
 import models.Livre;
@@ -28,7 +30,6 @@ public class Bibliotheque extends HttpServlet {
 	protected void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
 		HttpSession session = request.getSession();
 		String reference = request.getParameter("reference");
-		request.setAttribute("reference", reference);
 		session.setAttribute("reference", reference);
 		response.sendRedirect(request.getContextPath() + "/update");
 	}

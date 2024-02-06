@@ -32,7 +32,6 @@
 					
 			 		for (Livre l : livres) { 
 				 		request.setAttribute("reference", l.getReference());
-				 		session.setAttribute("reference", l.getReference());
 				 		String Lreference =l.getReference();
 			 		%>
 			 	<tr>
