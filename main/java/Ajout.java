@@ -15,7 +15,6 @@ public class Ajout extends HttpServlet {
 		String titre = request.getParameter("titre");
 		String auteur = request.getParameter("auteur");
 		Livre nouveauLivre = new Livre (titre, auteur);
-		System.out.println(nouveauLivre);
 		nouveauLivre.insert();
 		response.sendRedirect(request.getContextPath() + "");
 	}

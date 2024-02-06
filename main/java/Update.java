@@ -37,7 +37,6 @@ public class Update extends HttpServlet {
 
 		Livre nouveauLivre = new Livre (titre, auteur);
 		nouveauLivre.setReference(reference);
-		System.out.println(nouveauLivre);
 		nouveauLivre.update();
 		response.sendRedirect(request.getContextPath() + "");			
 	}
