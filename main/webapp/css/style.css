@@ -5,31 +5,48 @@
 	font-family: sans-serif;
 }
 
-.topimage {
-	background-image: url("../resources/books.jpg");
-	width: 100%;
-	height: 150px;
-
+.top-header {
+	background-color: #ffffcc;
 }
 
-.aligned {
-	text-align: center;
-}
-
-h1, h2{
+.top-header > h2 {
+	font-size: 2rem;
 	padding: 1.5em;
 }
 
+.books-list {
+	display: flex;
+	flex-direction: column;
+	background-color: #ffffcc;
+}
+
+.books-list > h1 {
+	position: relative;
+	margin-top: 50px;
+	padding: 1.5em;
+	font-size: 3rem;
+}
+
+.topimage > img {
+	width: 100%;
+	height: 150px;
+}
 
 th, td {
-	padding-left: 8em;
-	padding-right: 8em;
-	padding-top: 2.5em;
-	padding-bottom: 2.5em;
+	padding: 1.5em 3em 1.5em 3em ;
+	font-size: 1.5rem;
 }
+
+table tr:nth-child(even){
+	background-color: #ffb3ff;
+}
+
+table tr:nth-child(odd){
+	background-color: #cc00cc;
+}
+
 ul {
 	list-style-type: none;
-	background-color: #cc00cc;
 }
 
 li {
@@ -37,45 +54,42 @@ li {
 	font-size: 1.5rem;
 }
 
-.books{
-	margin: 5em;
-}
-
-.books tr:nth-child(even){
-	background-color: #ffb3ff;
-}
-
-.books tr:nth-child(odd){
-	background-color: #cc00cc;
-}
-
 footer {
 	background-color: #e6e6e6;
 }
 
-.flex-container {
-	display: flex;
-	flex-direction: column;
-	width: 40em;
-    justify-content: center;
-    align-items: center;
+.submit {
+	background-color: black;
+	font-size: 1.5rem;
+	border: none;
+	color: white;
+	padding: 16px 32px;
+	text-decoration: none;
+	margin: 4px 2px;
+	cursor: pointer;
 }
 
-.update {
-	width: 40em;
-	height: 15em;
-	background-color: #cc00cc;
+.new-book {
 	display: flex;
-	
+	flex-direction: column;
+	padding-bottom: 100px;
+	background-color: #ffffcc;
+}
+
+.new-book > h2 {
+	position: relative;
+	margin-top: 50px;
+	padding: 1.5em;
+	font-size: 2rem;
 }
 
 .ajout {
-	width: 40em;
+	width: 60em;
 	height: 15em;
 	background-color: #5900b3;
 	color: white;
 	border: none;
-	padding: 3em;
+	padding: 50px 50px 100px 50px;
 	text-align: center;
 }
 
@@ -83,17 +97,40 @@ footer {
 	color: white;
 }
 
-.bottomcontainer {
-	display: flex;
+.adding-form {
+	padding: 12px 20px;
+	margin: 8px 0px;
 }
 
+.adding-form > label {
+	width: 75%;
+	padding: 12px 20px;
+	font-size: 1.5rem;
+}
+
+.adding-form > input {
+	width: 75%;
+	padding: 12px 20px;
+}
+
+footer {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+}
+
+footer > p {
+	margin: 25px;
+}
+
+.bottomcontainer {
+
+	display: flex;
+	justify-content: space-around;
+}
 
 .bottomelements {
 	padding: 1.5em;
-
-}
-
-.formelement {
-	padding: 12px 20px;
-	margin: 8px 0px;
+	margin-left: 100px;
+	margin-right: 100px;
 }
